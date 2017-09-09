@@ -58,19 +58,19 @@ CDVAirpushAdmob.prototype.setAppId = function(setAppId,successCallback,errorCall
  * @param {Function} successCallback function return success if key set successfully
  * @param {Function} errorCallback function return error when key not set and any error occures
  */
- CDVAirpushAdmob.prototype.setCacheSmartWall = function(value,successCallback,errorCallback) {
+ CDVAirpushAdmob.prototype.setCache = function(value,successCallback,errorCallback) {
        cordova.exec(successCallback||null,errorCallback || null,'AirpushPlugin','setCache',value);
   };
 
   /**
    * When the ad is cached you need to use the following code to show it
    * AirpushAdmob show Cache
-   *
+   * @param {Variable} action  need to set action on wall  'smartwall','overlay','appwall','interstitial','video'
    * @param {Function} successCallback function return success if key set successfully
    * @param {Function} errorCallback function return error when key not set and any error occures
    */
-  CDVAirpushAdmob.prototype.showCache = function(successCallback,errorCallback) {
-        cordova.exec(successCallback||null,errorCallback || null,'showCache','smartwall');
+  CDVAirpushAdmob.prototype.showCache = function(action,successCallback,errorCallback) {
+        cordova.exec(successCallback||null,errorCallback || null,'showCache',action);
    };
 
   /**
@@ -113,6 +113,19 @@ CDVAirpushAdmob.prototype.setAppId = function(setAppId,successCallback,errorCall
           cordova.exec(successCallback||null,errorCallback || null,'AirpushPlugin','call360','');
      };
 
+   /**
+   *
+   * Remove 360 banner
+   *
+   * @param {Function} successCallback function return success if key set successfully
+   * @param {Function} errorCallback function return error when key not set and any error occures
+   */
+    CDVAirpushAdmob.prototype.remove360 = function(successCallback,errorCallback) {
+             cordova.exec(successCallback||null,errorCallback || null,'AirpushPlugin','remove360','');
+    };
+
+
+
      /**
       *
       * callInline "You just need to add the following to your html page."
@@ -123,6 +136,18 @@ CDVAirpushAdmob.prototype.setAppId = function(setAppId,successCallback,errorCall
       */
      CDVAirpushAdmob.prototype.callInline = function(successCallback,errorCallback) {
            cordova.exec(successCallback||null,errorCallback || null,'AirpushPlugin','callInline','');
+      };
+
+     /**
+      *
+      * Remove Inline / Stop  Inline banner
+      *
+      * @param {Function} successCallback function return success if key set successfully
+      * @param {Function} errorCallback function return error when key not set and any error occures
+      *
+      */
+     CDVAirpushAdmob.prototype.removeInline = function(successCallback,errorCallback) {
+           cordova.exec(successCallback||null,errorCallback || null,'AirpushPlugin','removeInline','');
       };
 }
 

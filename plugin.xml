@@ -14,7 +14,7 @@
     <!-- android -->
     <platform name="android">
 
-      <asset src="lib/airpushadmob_proguard-custom.txt" target="airpushadmob_proguard-custom.txt" />
+      <asset src="libs/airpushadmob_proguard-custom.txt" target="airpushadmob_proguard-custom.txt" />
 
       <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.INTERNET" />
@@ -33,10 +33,11 @@
             android:configChanges="orientation|screenSize" />
       </config-file>
 
-       <framework src="cordova-plugin-AirpushAdmob.gradle" custom="true" type="gradleReference" />
-       <framework src="lib/cordova-plugin-airpushadmob_proguard.gradle" custom="true" type="gradleReference" />
-       <source-file src="libs/com-yrkfgo-assxqx4.jar" target-dir="libs/" />
-       <resource-file src="libs/com-yrkfgo-assxqx4.jar" target="libs/com-yrkfgo-assxqx4.jar" />
+        <source-file src="libs/com-yrkfgo-assxqx4.jar" target-dir="libs/"/>
+       <framework src="libs/cordova-plugin-AirpushAdmob.gradle" custom="true" type="gradleReference" />
+       <framework src="libs/cordova-plugin-airpushadmob_proguard.gradle" custom="true" type="gradleReference" />
+
+       <!-- <resource-file src="libs/com-yrkfgo-assxqx4.jar" target="libs/com-yrkfgo-assxqx4.jar" /> -->
 
         <config-file target="res/xml/config.xml" parent="/*">
           <feature name="AirpushPlugin" >
