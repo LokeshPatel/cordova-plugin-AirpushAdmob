@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-AirpushAdmob"
+    version="1.0.0">
+    <name>Airpush Admob</name>
+    <description>Cordova plugin Airpush Admob</description>
+    <keywords>cordova,device</keywords>
+
+    <js-module src="www/cordova-plugin-AirpushAdmob.js" name="device">
+        <clobbers target="AirpushAdmob" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+
+      <asset src="lib/airpushadmob_proguard-custom.txt" target="airpushadmob_proguard-custom.txt" />
+
+      <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  		</config-file>
+
+      <config-file target="AndroidManifest.xml" parent="./application">
+            <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+            <activity android:exported="false" android:name="com.yrkfgo.assxqx4.AdActivity"
+                 android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+            <activity android:name="com.yrkfgo.assxqx4.BrowserActivity"
+            android:configChanges="orientation|screenSize" />
+      </config-file>
+
+       <framework src="cordova-plugin-AirpushAdmob.gradle" custom="true" type="gradleReference" />
+       <framework src="lib/cordova-plugin-airpushadmob_proguard.gradle" custom="true" type="gradleReference" />
+       <source-file src="libs/com-yrkfgo-assxqx4.jar" target-dir="libs/" />
+       <resource-file src="libs/com-yrkfgo-assxqx4.jar" target="libs/com-yrkfgo-assxqx4.jar" />
+
+        <config-file target="res/xml/config.xml" parent="/*">
+          <feature name="AirpushPlugin" >
+                <param  name="android-package"  value="com.yrkfgo.assxqx4.AirpushPlugin" />
+          </feature>
+        </config-file>
+    </platform>
+</plugin>
