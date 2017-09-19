@@ -10,7 +10,7 @@
 
 ### Initialization and set App ID and Api Key
 
-#### Air push <App Id> and <API Key>, Registering your Android application: [www.airpush.com](www.airpush.com)
+#### Air push "App Id" and "API Key" Registering your Android application: [www.airpush.com](www.airpush.com)
 
 #### Add following code after onDeviceReady is called
  ```
