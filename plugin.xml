@@ -8,40 +8,43 @@
     <keywords>cordova,device</keywords>
 
     <js-module src="www/cordova-plugin-AirpushAdmob.js" name="device">
-        <clobbers target="AirpushAdmob" />
+        <clobbers target="CDVAirpushAdmob" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
-
-      <asset src="libs/airpushadmob_proguard-custom.txt" target="airpushadmob_proguard-custom.txt" />
-
       <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
         <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
         <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
   		</config-file>
 
       <config-file target="AndroidManifest.xml" parent="./application">
             <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
             <activity android:exported="false" android:name="com.yrkfgo.assxqx4.AdActivity"
-                 android:configChanges="orientation|screenSize"
-            android:theme="@android:style/Theme.Translucent" />
+                      android:configChanges="orientation|screenSize"
+                      android:theme="@android:style/Theme.Translucent" />
             <activity android:name="com.yrkfgo.assxqx4.BrowserActivity"
-            android:configChanges="orientation|screenSize" />
+                      android:configChanges="orientation|screenSize" />
+            <service  android:name="com.yrkfgo.assxqx4.LService" android:exported="false"></service>
+            <receiver android:name="com.yrkfgo.assxqx4.BootReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                </intent-filter>
+        </receiver>
       </config-file>
 
         <source-file src="libs/com-yrkfgo-assxqx4.jar" target-dir="libs/"/>
+        <resource-file src="libs/com-yrkfgo-assxqx4.jar" target="libs/com-yrkfgo-assxqx4.jar" />
        <framework src="libs/cordova-plugin-AirpushAdmob.gradle" custom="true" type="gradleReference" />
-       <framework src="libs/cordova-plugin-airpushadmob_proguard.gradle" custom="true" type="gradleReference" />
-
-       <!-- <resource-file src="libs/com-yrkfgo-assxqx4.jar" target="libs/com-yrkfgo-assxqx4.jar" /> -->
-
         <config-file target="res/xml/config.xml" parent="/*">
           <feature name="AirpushPlugin" >
-                <param  name="android-package"  value="com.yrkfgo.assxqx4.AirpushPlugin" />
+             <param  name="android-package" value="com.yrkfgo.assxqx4.AirpushPlugin" />
           </feature>
         </config-file>
     </platform>

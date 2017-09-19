@@ -1,2 +1,0 @@
--keep class com.yrkfgo.assxqx4.** {*;}
--dontwarn com.yrkfgo.assxqx4.**

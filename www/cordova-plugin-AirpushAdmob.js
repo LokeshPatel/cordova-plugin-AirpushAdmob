@@ -90,6 +90,7 @@ CDVAirpushAdmob.prototype.setAppId = function(setAppId,successCallback,errorCall
         cordova.exec(successCallback||null,errorCallback || null,'AirpushPlugin','airpushSmartWallAd',action);
    };
 
+
    /**
     *
     * set placement id for banner "Placement ID allows you to create multiple placements of the 360 Banners"
