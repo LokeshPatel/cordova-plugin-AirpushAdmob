@@ -76,5 +76,6 @@
 
 #### Also add "CDVAirpushAdmob.wallFormats.Smartwall" values direct like "smartwall","video","overlay" .. etc
 
-## Cordova plugin AirpushAdmob development based on API Reference AirPush Cordova doc.
-More Details:[Docs Airpush](http://docs.airpush.com/index.php/Cordova_plugin_Bundle1_SDK_9.0)
+#### Cordova plugin AirpushAdmob development based on API Reference AirPush Cordova doc.
+
+#### More Details:[Airpush plugin Docs](http://docs.airpush.com/index.php/Cordova_plugin_Bundle1_SDK_9.0)
