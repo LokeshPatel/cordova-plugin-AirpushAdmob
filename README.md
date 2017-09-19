@@ -9,12 +9,13 @@
            cordova plugin add https://github.com/LokeshPatel/cordova-plugin-AirpushAdmob
  ```
 
-## Initialization and set AppID and Key
+## Initialization and set AppID and ApiKey
 
-### Add the below code in index.js script to your assets/www folder (or javascripts folder, wherever you want really) and reference it in your main index.html file. Add following code after onDeviceReady is called
+#### Add following code after onDeviceReady is called
  ```
-           CDVAirpushAdmob.setAppId(29011, callbackSuccess,callbackFail);
-           CDVAirpushAdmob.setApiKey(1361616622473125425,callbackSuccess,callbackFail);
+           CDVAirpushAdmob.setAppId(<appid>, callbackSuccess,callbackFail);
+
+           CDVAirpushAdmob.setApiKey(<ApiKey>,callbackSuccess,callbackFail);
  ```
 
 ## Enable caching in index.html:
@@ -49,24 +50,24 @@
 
 
 ## Using SmartWall in your application:
-### Airpush’s SmartWall is comprised of the following five sub Ad Formats:
-### Dialog Overlay Ad
-### AppWall Ad
-### Rich Media Interstitial Ad
-### Video Ad
-### Landing Page Ad
+#### Airpush’s SmartWall is comprised of the following five sub Ad Formats:
+#### Dialog Overlay Ad
+#### AppWall Ad
+#### Rich Media Interstitial Ad
+#### Video Ad
+#### Landing Page Ad
 
 ```
-CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Smartwall,callbackSuccess,callbackFail);
+      CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Smartwall,callbackSuccess,callbackFail);
 
-CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Overlay,callbackSuccess,callbackFail);
+      CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Overlay,callbackSuccess,callbackFail);
 
-CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Appwall,callbackSuccess,callbackFail);
+      CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Appwall,callbackSuccess,callbackFail);
 
-CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Interstitial,callbackSuccess,callbackFail);
+      CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Interstitial,callbackSuccess,callbackFail);
 
-CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Video,callbackSuccess,callbackFail);
+      CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Video,callbackSuccess,callbackFail);
 
-CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.LandingPage,callbackSuccess,callbackFail);
+      CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.LandingPage,callbackSuccess,callbackFail);
 
 ```
