@@ -1,15 +1,13 @@
 # cordova-plugin-AirpushAdmob
 
 
-# Install plugin
-
-## Master branch:
+### Plugin Install :
 
  ```
            cordova plugin add https://github.com/LokeshPatel/cordova-plugin-AirpushAdmob
  ```
 
-## Initialization and set AppID and ApiKey
+### Initialization and set AppID and ApiKey
 
 #### Add following code after onDeviceReady is called
  ```
@@ -18,38 +16,39 @@
            CDVAirpushAdmob.setApiKey(<ApiKey>,callbackSuccess,callbackFail);
  ```
 
-## Enable caching in index.html:
+### Enable caching in index.html:
  ```
          CDVAirpushAdmob.setCache(x,callbackSuccess,callbackFail);
  ```
 
-## Show Cache
+### Show Cache
 ```
         CDVAirpushAdmob.showCache("",callbackSuccess,callbackFail);
 ```
 
-## 360 Ad
+### 360 Ad
 ```
          CDVAirpushAdmob.call360(callbackSuccess,callbackFail);
 ```
 
-## 360 Ad Remove
+### 360 Ad Remove
 ```
          CDVAirpushAdmob.remove360(callbackSuccess,callbackFail);
 ```
 
-## Adding Inline 360 Ads
+### Adding Inline 360 Ads
 ```
          CDVAirpushAdmob.callInline(callbackSuccess,callbackFail);
 ```
 
-## Adding remove Inline
+### Adding remove Inline
 ```
          CDVAirpushAdmob.removeInline(callbackSuccess,callbackFail);
 ```
 
 
-## Using SmartWall in your application:
+### Using SmartWall in your application:
+
 #### Airpush’s SmartWall is comprised of the following five sub Ad Formats:
 #### Dialog Overlay Ad
 #### AppWall Ad
@@ -71,3 +70,5 @@
       CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.LandingPage,callbackSuccess,callbackFail);
 
 ```
+
+#### Also add "CDVAirpushAdmob.wallFormats.Smartwall" values direct like "smartwall","video","overlay" .. etc
