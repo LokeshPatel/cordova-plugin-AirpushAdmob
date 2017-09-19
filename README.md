@@ -1,13 +1,16 @@
 # cordova-plugin-AirpushAdmob
 
-
 ### Plugin Install :
 
  ```
            cordova plugin add https://github.com/LokeshPatel/cordova-plugin-AirpushAdmob
  ```
 
-### Initialization and set AppID and ApiKey
+
+
+### Initialization and set App ID and Api Key
+
+#### Air push <App Id> and <API Key>, Registering your Android application: [www.airpush.com](www.airpush.com)
 
 #### Add following code after onDeviceReady is called
  ```
@@ -72,3 +75,6 @@
 ```
 
 #### Also add "CDVAirpushAdmob.wallFormats.Smartwall" values direct like "smartwall","video","overlay" .. etc
+
+## Cordova plugin AirpushAdmob development based on API Reference AirPush Cordova doc.
+More Details:[Docs Airpush](http://docs.airpush.com/index.php/Cordova_plugin_Bundle1_SDK_9.0)
