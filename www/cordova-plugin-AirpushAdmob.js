@@ -21,14 +21,15 @@ function CDVAirpushAdmob() {
   *  AppWall Ad
   *  Rich Media Interstitial Ad
   *  Video Ad
-  *
+  *  Landing Page Ad
   */
   CDVAirpushAdmob.prototype.wallFormats = {
        Smartwall:'smartwall',
        Overlay:'overlay',
        Appwall:'appwall',
        Interstitial:'interstitial',
-       Video:'video'
+       Video:'video',
+       LandingPage : 'landing_page'
   }
  /**
   * set AirpushAdmob configation setAppId
