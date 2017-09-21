@@ -68,13 +68,12 @@
 #### Landing Page Ad
 
 ```
-   function callbackSuccess(result){
-		  	console.log(result)
-	  }
-	  function callbackFail (error){
-		    console.log(error)
-   }
-
+      function callbackSuccess(result){
+		   console.log(result)
+		  }
+      function callbackFail (error){
+		  console.log(error)
+	       }
       CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Smartwall,callbackSuccess,callbackFail);
 
       CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Overlay,callbackSuccess,callbackFail);
