@@ -11,13 +11,21 @@
 ### Initialization and set App ID and Api Key
 
 #### Air push "App Id" and "API Key" Registering your Android application: [www.airpush.com](www.airpush.com)
-
+ 
 #### Add following code after onDeviceReady is called
- ```
-           CDVAirpushAdmob.setAppId(<appid>, callbackSuccess,callbackFail);
+ ``` 
+          function callbackSuccess(result){
+              console.log(result)
+            }
+          function callbackFail (error){
+               console.log(error)
+            }
+            CDVAirpushAdmob.setAppId(<appid>, callbackSuccess,callbackFail);
 
-           CDVAirpushAdmob.setApiKey(<ApiKey>,callbackSuccess,callbackFail);
+           CDVAirpushAdmob.setApiKey("<ApiKey>",callbackSuccess,callbackFail);
  ```
+#### Note : App id should be a number
+
 
 ### Enable caching in index.html:
  ```
@@ -60,6 +68,13 @@
 #### Landing Page Ad
 
 ```
+   function callbackSuccess(result){
+		  	console.log(result)
+	  }
+	  function callbackFail (error){
+		    console.log(error)
+   }
+
       CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Smartwall,callbackSuccess,callbackFail);
 
       CDVAirpushAdmob.airpushSmartWallAd(CDVAirpushAdmob.wallFormats.Overlay,callbackSuccess,callbackFail);
