@@ -22,7 +22,7 @@
             }
             CDVAirpushAdmob.setAppId(<appid>, callbackSuccess,callbackFail);
 
-           CDVAirpushAdmob.setApiKey("<ApiKey>",callbackSuccess,callbackFail);
+           CDVAirpushAdmob.setApiKey(<ApiKey>,callbackSuccess,callbackFail);
  ```
 #### Note : App id should be a number
 
